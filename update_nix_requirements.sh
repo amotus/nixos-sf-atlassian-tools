@@ -4,4 +4,17 @@
 #!nix-shell -I "nixpkgs=https://github.com/NixOS/nixpkgs/archive/96c9578020133fe64feab90c00f3cb880d53ad0d.tar.gz"
 #!nix-shell -p "(import <pypi2nixSrc>) {pkgs = import <nixpkgs> {};}"
 
-pypi2nix -vvv -V python3 -r ./requirements.txt --default-overrides
+pypi2nix\
+ -vvv\
+ -V python3\
+ -r ./requirements.txt\
+ --default-overrides\
+ -e cffi\
+ -E libffi\
+ -E openssl\
+ -s setuptools-scm\
+ -s pytest-runner\
+ -s pbr\
+ -s sphinx\
+ -s cryptography\
+ -s pyjwt

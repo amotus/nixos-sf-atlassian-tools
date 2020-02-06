@@ -17,17 +17,18 @@ let
     src = nix-gitignore.gitignoreSourcePure ./.gitignore ./.;
     buildInputs = [];
     checkInputs =  with appPython.packages; [
-      mypy
-      pytest
+      # mypy
+      # pytest
       # flake
     ] ++ lib.optionals fromNixShell [
       ipython
     ];
     propagatedBuildInputs = with appPython.packages; [
       atlassian-python-api
+      jira
       click
     ];
-
+/*
     postInstall = ''
       click_exes=( "nixos-sf-bitbucket" )
 
@@ -44,7 +45,7 @@ let
         cat "$bash_completion_dir/$e" | grep "$e" > /dev/null
       done
     '';
-
+*/
     # Allow nix-shell inside nix-shell.
     # See `pkgs/development/interpreters/python/hooks/setuptools-build-hook.sh`
     # for the reason why.

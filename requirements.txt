@@ -3,5 +3,7 @@ ipython
 mypy
 pytest
 atlassian-python-api
+jira
 click
 -c constraints.txt
+# cffi
