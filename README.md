@@ -1,6 +1,8 @@
 Readme
 ======
 
+**IMPORTANT**: Deprecated location. Moved to [nsf-atlassian-tools](https://github.com/amotus/nsf-atlassian-tools).
+
 Some atlassian admin tools to support [nixos-secure-factory] based projects.
 
 Features
